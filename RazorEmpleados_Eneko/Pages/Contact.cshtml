@@ -1,0 +1,19 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contacto";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+<address>
+    C/ Falsa 1213y<br />
+    Nueva York, 12-213<br />
+    <abbr title="Phone">Tel:</abbr>
+    443-23432-123
+</address>
+
+<address>
+    <strong>Soporte:</strong> <a href="mailto:soporte@example.com">soporte@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:marketing@example.com">marketing@example.com</a>
+</address>

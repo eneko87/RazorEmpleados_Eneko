@@ -1,0 +1,72 @@
+﻿@page
+@model RazorEmpleados_Eneko.Pages.GestionEmpleados.IndexModel
+
+@{
+    ViewData["Title"] = "Lista de empleados";
+}
+
+<h2>Lista de empleados</h2>
+
+<p>
+    <a asp-page="Create">Crear nuevo empleado</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Empleados) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.ID">Detalles</a>
+                <a asp-page="./Edit" asp-route-id="@item.ID"> | Editar</a>
+                <a asp-page="./Delete" asp-route-id="@item.ID"> | Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

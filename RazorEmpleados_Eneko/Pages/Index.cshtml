@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<br clear="all" />
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/banner_Gaztelugatxe.jpg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Esto es Gaztelugatxe...
+                    <a class="btn btn-default" href="https://eu.wikipedia.org/wiki/Gaztelugatxe">
+                        Saber más
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/banner_Rysy.jpg" alt="Visual Studio" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Esto es Rysy en los Tatras...
+                    <a class="btn btn-default" href="https://pl.wikipedia.org/wiki/Rysy">
+                        Saber más
+                    </a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Enciclopedias</h2>
+        <ul>
+            <li>Enciclopedias colaborativas</li>
+            <li>Lista de <a href="https://www.wikipedia.org/">Wikipedias</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Mapas</h2>
+        <ul>
+            <li><a href="https://www.google.com/maps">Mapas de Google</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Música</h2>
+        <ul>
+            <li><a href="https://www.spotify.com/">Spotify</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Redes Sociales</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/">Facebook</a></li>
+            <li><a href="https://www.twitter.com/">Twitter</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+        </ul>
+    </div>
+</div>
+<br />
+<p>Hora actual: @DateTime.Now</p>

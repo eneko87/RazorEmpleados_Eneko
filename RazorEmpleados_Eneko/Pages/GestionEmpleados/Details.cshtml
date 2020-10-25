@@ -1,0 +1,61 @@
+﻿@page
+@model RazorEmpleados_Eneko.Pages.GestionEmpleados.DetailsModel
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Empleados</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.Apellido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.FechaNacimiento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.FechaNacimiento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.Direccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.Telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.Telefono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Empleados.ID">Editar</a> |
+    <a asp-page="./Index">Volver a la lista</a>
+</div>
